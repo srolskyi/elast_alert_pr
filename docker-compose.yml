@@ -1,0 +1,18 @@
+version: '3'
+services:
+        elastalert_dc:
+                image: srolskyi/elastalert_docker   
+                cap_add:
+                        - SYS_TIME
+                        - SYS_NICE
+                volumes:
+                        - /opt/dc/elastalert/config:/opt/config
+                        - /opt/dc/elastalert/rules:/opt/rules
+                        - /opt/dc/elastalert/logs:/opt/logs
+                environment:
+                       - SET_CONTAINER_TIMEZONE=true 
+                       - CONTAINER_TIMEZONE=Europe/Berlin #set your timezone
+                       - ELASTICSEARCH_HOST=elastic-search.host.com #set your url or IP elasticsearch
+                       - ELASTICSEARCH_PORT=9200 #set port Elasticsearch
+                       - ELASTALERT_INDEX=elastalert_status #default name index from elastalert
+
