@@ -5,7 +5,7 @@ FROM centos:7
 MAINTAINER Sergii Rolskyi 
 
 # Download latest Elasticalert
-ENV ELASTALERT_URL https://github.com/Yelp/elastalert/archive/master.zip
+ENV ELASTALERT_URL https://github.com/Yelp/elastalert/archive/add-format-string-for-percentage.zip
 
 # Set this environment variable to true to set timezone on container start.
 ENV SET_CONTAINER_TIMEZONE false
