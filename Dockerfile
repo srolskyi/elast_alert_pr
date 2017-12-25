@@ -86,6 +86,7 @@ RUN curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py" && \
     cp "${ELASTALERT_HOME}/supervisord.conf.example" "${ELASTALERT_SUPERVISOR_CONF}" && \
 
 # Elastalert configuration:
+
 # Set the rule directory in the Elastalert config file to external rules directory.
     sed -i -e"s|rules_folder: [[:print:]]*|rules_folder: ${RULES_DIRECTORY}|g" "${ELASTALERT_CONFIG}" && \
 # Set the Elasticsearch host that Elastalert is to query.
