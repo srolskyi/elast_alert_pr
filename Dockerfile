@@ -1,5 +1,4 @@
 #ElastAlert and Centos:7
-
 FROM centos:7
 
 MAINTAINER Sergii Rolskyi 
