@@ -3,7 +3,8 @@ FROM centos:7
 MAINTAINER Sergii Rolskyi 
 
 # Download latest Elasticalert
-ENV ELASTALERT_URL https://github.com/Yelp/elastalert/archive/master.zip
+#ENV ELASTALERT_URL https://github.com/Yelp/elastalert/archive/master.zip
+ENV ELASTALERT_URL https://github.com/bitsensor/elastalert/archive/master.zip
 
 # Set this environment variable to true to set timezone on container start.
 ENV SET_CONTAINER_TIMEZONE false
